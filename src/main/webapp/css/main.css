@@ -1,0 +1,213 @@
+html{
+    margin: -7px;
+    /* --themeColor: rgb(227, 190, 190); */
+    /* --fontColor: rgb(117, 111, 105); */
+    --fontColor: #0a134d;
+    --themeColor:#6670b3 ;
+    background-color: black;
+
+   
+
+}
+
+
+
+#header{
+    background-color: var(--themeColor);
+    width: 100%;
+    height: auto;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    position: fixed;
+    display: flex;
+    font-family:  "Courier New", monospace;
+    /* flex-direction: column; */
+    color: var(--fontColor);
+
+     #page-title{
+        font-size: 4rem;
+        margin-top: 1vh;
+        width: 60vw;
+        height: 5rem;
+        margin-left: 25vw;
+        
+
+    }
+
+
+    .introDiv {
+        font-size: 50%;
+        width: 20wv;
+    }
+
+    
+}
+
+
+
+
+
+
+    
+
+
+
+
+
+.card{
+    border: 1px solid var(--themeColor);
+    color: var(--fontColor);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 6rem;
+    font-weight: 600;
+    margin-left: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 10px 10px 37px -2px rgba(0,0,0,0.3);
+    transition: 1s;
+    margin-top: 5rem;
+}
+
+.card:hover{
+    box-shadow: 10px 10px 37px -2px rgba(0,0,0,0.8);
+}
+.cardLog{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right:-4rem ;
+    margin-bottom: 1rem;
+    
+}
+
+
+
+
+.main{
+    display: flex;
+
+    padding-top: 4vh;
+    justify-content: flex-start;
+
+    #main-form {
+        margin: 20vh;
+
+        .params{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: -10rem;
+            margin-top: -3rem;
+
+           
+        }
+        
+    }
+    #ParamsSecTitle{
+        font-size: 3rem;
+        background: linear-gradient(var(--fontColor), #9198e5);
+        width: 25vw;
+        margin-left: -6rem;
+    }
+
+    .xValues,.rValues,.yValues{
+        background-color: var(--themeColor);  
+        font-size: 0.7rem; 
+        width: 3vw;
+        padding-left: 2rem;
+        
+    }
+    
+    .xValues{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    
+
+    
+    .rButton{
+        width: 5rem;
+        margin-right: -2.5rem;
+        margin-top: 3px;
+    }
+
+    
+    .rButton:hover{
+        background-color: var(--themeColor);
+    }
+
+    #submitForm{
+        margin-top: 15vh;
+        margin-left: 2vw;
+        font-size: 30px;
+        background-color: var(--themeColor);
+        color: var(--fontColor);
+        border-radius: 5px;
+        border: 0px;
+    }
+
+    
+}
+button{
+    border: 2px solid var(--fontColor);
+    border-radius: 5px;
+}
+
+
+#currentR{
+    width: 6rem;
+    margin-right: -3rem;
+}
+
+
+.plane{
+    margin-top: 23vh;
+    margin-right: 3vw;
+    height: auto;
+
+    .svg-graph{
+        background-color: var(--themeColor);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+
+.results{
+    margin-top: 11vh;
+    padding-top: 10vh;
+}
+
+
+    table,th,td{
+        border: 2px solid var(--themeColor);
+        color: white;
+        font-size: 2rem;
+        
+    }
+
+    th,td{
+        padding-left: 0.3rem;
+        width: 3vw;
+    }
+
+    td{
+    font-size: 1rem;
+    padding:1rem;
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--themeColor);
+    color: var(--fontColor);
+    text-align: center;
+    height: 7vh;}
