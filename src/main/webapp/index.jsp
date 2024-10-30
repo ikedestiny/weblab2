@@ -8,9 +8,9 @@
 <head>
     <meta charset='utf-8'>
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <title>Page Title</title>
+    <title>Home</title>
     <meta content='width=device-width, initial-scale=1' name='viewport'>
-    <link href='./css/main.css' media='screen' rel='stylesheet' type='text/css'>
+    <link href='./css/new.css' media='screen' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -56,7 +56,7 @@
                 <input id="y" max="3" min="-3" type="number" value="0">
             </div>
         </div>
-        <button id="submitForm" type="button">Submit</button>
+        <button id="submitForm" onclick="submitFunc()" type="button">Submit</button>
 
 
     </form>
@@ -64,62 +64,66 @@
 
 
     <div class=" plane">
-        <svg class="svg-graph" height="280" width="280">
 
-            <!-- x-axes -->
-            <line class="axis" stroke="black" x1="4" x2="272" y1="140" y2="140"></line>
-            <line class="arrowHead" stroke="black" x1="260" x2="272" y1="132" y2="140"></line>
-            <line class="arrowHead" stroke="black" x1="260" x2="272" y1="148" y2="140"></line>
+        <svg class="svg-graph" height="560" width="560">
+        			<!-- x-axis -->
+        			<line class="axis" stroke="black" x1="4" x2="556" y1="280" y2="280"></line>
+        			<line class="arrowHead" stroke="black" x1="544" x2="556" y1="272" y2="280"></line>
+        			<line class="arrowHead" stroke="black" x1="544" x2="556" y1="288" y2="280"></line>
 
-            <!-- y-axes -->
-            <line class="axis" stroke="black" x1="140" x2="140" y1="4" y2="272"></line>
-            <line class="arrowHead" stroke="black" x1="140" x2="120" y1="4" y2="24"></line>
-            <line class="arrowHead" stroke="black" x1="140" x2="160" y1="4" y2="24"></line>
+        			<!-- y-axis -->
+        			<line class="axis" stroke="black" x1="280" x2="280" y1="4" y2="556"></line>
+        			<line class="arrowHead" stroke="black" x1="280" x2="260" y1="4" y2="24"></line>
+        			<line class="arrowHead" stroke="black" x1="280" x2="300" y1="4" y2="24"></line>
 
-            <!-- coordinate lines -->
-            <line class="Xcoor" stroke="black" x1="33" x2="33" y1="136" y2="144"></line>
-            <line class="Xcoor" stroke="black" x1="86" x2="86" y1="136" y2="144"></line>
-            <line class="Xcoor" stroke="black" x1="194" x2="194" y1="136" y2="144"></line>
-            <line class="Xcoor" stroke="black" x1="247" x2="247" y1="136" y2="144"></line>
+        			<!-- coordinate lines for x-axis -->
+        			<line class="Xcoor" stroke="black" x1="84" x2="84" y1="276" y2="284"></line>  <!-- -5 -->
+        			<line class="Xcoor" stroke="black" x1="182" x2="182" y1="276" y2="284"></line>  <!-- -2.5 -->
+        			<line class="Xcoor" stroke="black" x1="378" x2="378" y1="276" y2="284"></line> <!-- 2.5 -->
+        			<line class="Xcoor" stroke="black" x1="476" x2="476" y1="276" y2="284"></line> <!-- 5 -->
 
-            <line class="Ycoor" stroke="black" x1="136" x2="144" y1="33" y2="33"></line>
-            <line class="Ycoor" stroke="black" x1="136" x2="144" y1="86" y2="86"></line>
-            <line class="Ycoor" stroke="black" x1="136" x2="144" y1="194" y2="194"></line>
-            <line class="Ycoor" stroke="black" x1="136" x2="144" y1="247" y2="247"></line>
+        			<!-- coordinate lines for y-axis -->
+        			<line class="Ycoor" stroke="black" x1="276" x2="284" y1="84" y2="84"></line>  <!-- 5 -->
+        			<line class="Ycoor" stroke="black" x1="276" x2="284" y1="182" y2="182"></line>  <!-- 2.5 -->
+        			<line class="Ycoor" stroke="black" x1="276" x2="284" y1="378" y2="378"></line> <!-- -2.5 -->
+        			<line class="Ycoor" stroke="black" x1="276" x2="284" y1="476" y2="476"></line> <!-- -5 -->
 
-            <text class="xCoorText" x="268" y="132">x</text>
-            <text id="rTextY" class="xCoorText" x="246" y="132">3</text>
-            <text id="r/2TextY" class="xCoorText" x="192" y="132">1.5</text>
-            <text id="-r/2TextY" class="xCoorText" x="83" y="132">-1.5</text>
-            <text id="-rTextY" class="xCoorText" x="30" y="132">-3</text>
+        			<!-- x-axis labels -->
+        			<text class="xCoorText" x="552" y="272">x</text>
+        			<text class="xCoorText" x="470" y="272">5</text>
+        			<text class="xCoorText" x="366" y="272">2.5</text>
+        			<text class="xCoorText" x="170" y="272">-2.5</text>
+        			<text class="xCoorText" x="72" y="272">-5</text>
 
-            <text id="-r/2TextX" class="yCoorText" x="156" y="194">-1.5</text>
-            <text id="-rTextX" class="yCoorText" x="156" y="248">-3</text>
-            <text id="r/2TextX" class="yCoorText" x="156" y="86">1.5</text>
-            <text id="rTextX" class="yCoorText" x="156" y="34">3</text>
-            <text id="ytextX" class="yCoorText" x="156" y="10">y</text>
+        			<!-- y-axis labels -->
+        			<text class="yCoorText" x="296" y="88">5</text>
+        			<text class="yCoorText" x="296" y="186">2.5</text>
+        			<text class="yCoorText" x="296" y="382">-2.5</text>
+        			<text class="yCoorText" x="296" y="480">-5</text>
+        			<text class="yCoorText" x="296" y="20">y</text>
 
-            <!-- polygons -->
-            <polygon id="rectangle" fill="blue" fill-opacity="0.2" points="140,140 140,247 86,247 86,140"></polygon>
-            <!-- rectangle -->
-            <polygon id="triangle" fill="blue" fill-opacity="0.2" points="140,140 192,140 140,247"></polygon> <!-- triangle -->
+        			<!-- polygons (expanded) -->
+        			<polygon id="rectangle" fill="blue" fill-opacity="0.2" points="280,280 280,476 182,476 182,280"></polygon>
+        			<polygon id="triangle" fill="blue" fill-opacity="0.2" points="280,280 378,280 280,476"></polygon>
 
-            <!-- the curve -->
-            <path id="curve"
-                  d="
-                        M 247 140
-                        S 247 33 140 33
-                        L 140 140 L 86 140
-                    "
-                  fill="blue"
-                  fill-opacity="0.2"
-            />
-        </svg>
+        			<!-- the curve (expanded) -->
+        			<path id="curve"
+        				  d="
+                    M 476 280
+                    S 476 84 280 84
+                    L 280 280 L 182 280
+                "
+        				  fill="blue"
+        				  fill-opacity="0.2"
+        			/>
+        		</svg>
+
 
     </div>
 
     <div class="results">
         <table id="resultTable">
+                <caption>Results</caption>
             <tr>
                 <th>x</th>
                 <th>y</th>
@@ -142,6 +146,7 @@
                                         <%
                                         }%>
         </table>
+         <button class="rButton" onclick="sendClearRequest()">Clear</button>
     </div>
 
 

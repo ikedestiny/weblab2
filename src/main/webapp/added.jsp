@@ -6,9 +6,9 @@
 <head>
     <meta charset='utf-8'>
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <title>Page Title</title>
+    <title>ADDED</title>
     <meta content='width=device-width, initial-scale=1' name='viewport'>
-    <link href='./css/main.css' media='screen' rel='stylesheet' type='text/css'>
+    <link href='./css/new.css' media='screen' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -29,7 +29,7 @@
 <div class="main">
        <div class="results">
         <table id="resultTable">
-        <caption>Last Added</caption>
+        <caption>Last Added Result</caption>
             <tr>
                 <th>x</th>
                 <th>y</th>
@@ -38,9 +38,9 @@
                 <th>Request Sent</th>
                 <th>Response time</th>
             </tr>
-                  <%
-                                      Result result = results.getSessionResults().get(results.getSessionResults().size()-1);
-                                %>
+<%
+                                      Result result =  ((Result)application.getAttribute("current"));
+                                if(result != null){%>
                                 <tr>
                                      <td><%= result.getX() %></td>
                                          <td><%= result.getY() %></td>
@@ -48,18 +48,18 @@
                                          <td><%= result.isInArea() %></td>
                                          <td><%= result.getRequestSent() %></td>
                                          <td><%= result.getResponseTIme() %></td>
-                                    </tr>
+                                    </tr> <% } %>
 
         </table>
     </div>
 </div>
- <button>Home</button>
+ <button class="rButton" onclick="goHome()">Home</button>
 
 <!-- add table for result here -->
-<%= results.getSessionResults().size() %>
 <footer>
     <div class="footer"><h1>--????--</h1></div>
 </footer>
-<script defer src='./js/new.js'></script>
+<script defer src='./js/added.js'></script>
+
 </body>
 </html>

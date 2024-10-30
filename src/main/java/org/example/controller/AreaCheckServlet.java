@@ -25,21 +25,13 @@ public class AreaCheckServlet  extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-        Request parsedRequest = RequestParser.parse(RequestParser.getRequestBody(req));
+        Request parsedRequest = (Request) req.getAttribute("parsedReq");
+        parsedRequest.setReceived(System.nanoTime());
         Result result = checker.check(parsedRequest);
         ((Results)req.getSession().getAttribute("results")).addResult(result);
-        req.getRequestDispatcher("src/main/webapp/added.jsp").forward(req,resp);
-       // resp.sendRedirect(req.getContextPath()+"/added.jsp");
-        sendOK(resp,result);
-
+        getServletContext().setAttribute("current",result);
+        resp.sendRedirect(req.getContextPath()+"/added.jsp");
 
     }
 
-    public static void sendOK(HttpServletResponse response,Result result) throws IOException {
-        response.setContentType("application/json");  // Set based on expected content
-        response.setCharacterEncoding("UTF-8");
-        PrintWriter writer = response.getWriter();
-        writer.print(gson.toJson(result));
-        writer.flush();
-    }
 }

@@ -87,6 +87,7 @@ html{
 
 .main{
     display: flex;
+    color: white;
 
     padding-top: 4vh;
     justify-content: flex-start;

@@ -31,7 +31,6 @@ public class Checker {
         if (!(request.getX() >= 0 && request.getY() <= 0)) {
             return false;
         }
-
         Point checkPoint = new Point(request.getX(), request.getY());
         Point center = new Point(0, 0);
         Point Ox = new Point(request.getR() / 2, 0);
@@ -40,7 +39,7 @@ public class Checker {
         Triangle main = new Triangle(center, Ox, Oy);
         Triangle t1 = new Triangle(center, Ox, checkPoint);
         Triangle t2 = new Triangle(center, Oy, checkPoint);
-        Triangle t3 = new Triangle(Oy, Oy, checkPoint);
+        Triangle t3 = new Triangle(Oy, Ox, checkPoint);
 
         return main.area() == t1.area() + t2.area() + t3.area();
     }

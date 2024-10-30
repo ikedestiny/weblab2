@@ -5,20 +5,20 @@
          version="5.0">
 </web-app>
 
-<servlet>
-<servlet-name>ControllerServlet</servlet-name>
-<servlet-class>src.main.java.org.example.controller.ControllerServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-        <servlet-name>ControllerServlet</servlet-name>
-        <url-pattern>/controller-servlet</url-pattern>
-</servlet-mapping>
+<!--<servlet>-->
+<!--<servlet-name>ControllerServlet</servlet-name>-->
+<!--<servlet-class>src.main.java.org.example.controller.ControllerServlet</servlet-class>-->
+<!--</servlet>-->
+<!--<servlet-mapping>-->
+<!--        <servlet-name>ControllerServlet</servlet-name>-->
+<!--        <url-pattern>/controller-servlet</url-pattern>-->
+<!--</servlet-mapping>-->
 
-<servlet>
-<servlet-name>AreaCheckServlet</servlet-name>
-<servlet-class>src.main.java.org.example.controller.AreaCheckServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-        <servlet-name>AreaCheckServlet</servlet-name>
-        <url-pattern>/AreaCheckServlet</url-pattern>
-</servlet-mapping>
+<!--<servlet>-->
+<!--<servlet-name>AreaCheckServlet</servlet-name>-->
+<!--<servlet-class>src.main.java.org.example.controller.AreaCheckServlet</servlet-class>-->
+<!--</servlet>-->
+<!--<servlet-mapping>-->
+<!--        <servlet-name>AreaCheckServlet</servlet-name>-->
+<!--        <url-pattern>/AreaCheckServlet</url-pattern>-->
+<!--</servlet-mapping>-->
