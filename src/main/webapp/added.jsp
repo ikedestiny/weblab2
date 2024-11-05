@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" errorPage="error.jsp" %>
 <%@ page import="org.example.model.Result" %>
 <jsp:useBean id="results" scope="session" class="org.example.beans.Results"/>
 <!DOCTYPE html>

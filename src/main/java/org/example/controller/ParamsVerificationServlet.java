@@ -19,7 +19,9 @@ public class ParamsVerificationServlet extends HttpServlet {
 
 
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "some params are not within boundary ");
+
         }
+
 
 
     }
